@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #66A3BB;
+}
+
+.imgLogo {
+    width: 7vw;
+}
+
+.link {
+    align-self: center;
+    font-family: 'Lato', sans-serif;
+    font-size: x-large;
+    text-decoration: none;
+    color: #253A47;
+}
