@@ -14,7 +14,7 @@ export default function ItemDetailContainer() {
             .then(response => { setProduct(response) })
             .catch((e) => console.error(e))
     }, [itemId])
-
+    console.log(product)
     return (
         <div className="itemDetailContainer">
             {product && <ItemDetail {...product} />}

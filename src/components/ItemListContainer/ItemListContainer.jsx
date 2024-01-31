@@ -38,7 +38,6 @@ function ItemListContainer({ greeteng }) {
         <div>
             <h1 className='title'>{greeteng}</h1>
             <ItemList products={products} />
-            <ItemCount></ItemCount>
         </div>
     )
 }

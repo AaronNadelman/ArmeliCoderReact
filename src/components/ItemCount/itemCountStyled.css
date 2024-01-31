@@ -1,0 +1,18 @@
+.counter {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 1rem;
+    align-self: center;
+}

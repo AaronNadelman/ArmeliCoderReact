@@ -5,6 +5,7 @@ body {
 }
 
 .itemContainer {
+    font-family: 'Lato', sans-serif;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -14,6 +15,7 @@ body {
 }
 
 .item {
+    padding: 1rem;
     width: 100%;
     max-width: 20vw;
     margin: 20px;
@@ -24,9 +26,9 @@ body {
     transition: all 400ms ease;
 }
 
-item:hover {
+.item:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%);
+    transform: translateY(-2%);
 }
 
 .itemTitulo {
@@ -46,5 +48,9 @@ item:hover {
 
 .detalle {
     align-self: center;
+    font-family: 'Lato', sans-serif;
     color: #253A47;
+    font-size: x-large;
+    text-decoration: none;
+    box-shadow: 10px rgba(0, 0, 0, 0.2);
 }

@@ -1,4 +1,5 @@
 import { useCount } from '../../hooks/useCount'
+import './counterStyled.css'
 
 export default function Counter() {
     const { add, remove, valor } = useCount(0)

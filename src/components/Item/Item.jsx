@@ -11,10 +11,11 @@ const Item = ({ id, name, price, img, description, stock }) => {
                 <p className="itemInfo">{description}</p>
                 <p className='itemInfo'>Stock disponible: {stock}</p>
 
+
+
+                <Link to={`item/${id}`} className='detalle'>Detalle</Link>
+
             </article>
-            <footer>
-                <Link to={`item/${id}`}>Detalle</Link>
-            </footer>
         </div>
 
     )
