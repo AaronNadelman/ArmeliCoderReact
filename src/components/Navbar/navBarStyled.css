@@ -7,6 +7,7 @@
 .navBar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #66A3BB;
 }
 
@@ -16,8 +17,10 @@
 
 .link {
     align-self: center;
+    text-shadow: rgb(206, 206, 206) 2px;
     font-family: 'Lato', sans-serif;
     font-size: x-large;
     text-decoration: none;
     color: #253A47;
+    padding: 2vw;
 }
