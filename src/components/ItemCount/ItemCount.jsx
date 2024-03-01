@@ -1,5 +1,6 @@
 import './itemCountStyled.css'
 import { useState } from 'react'
+import Button from '../../commons/Button/Button'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
 

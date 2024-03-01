@@ -1,45 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import { getProducts, getProductsByCategory } from '../../utils/asynkMock'
+
+
+import { useState, useEffect } from "react";
 import ItemList from '../ItemList/ItemList'
-import './itemListStyled.css'
 import { useParams } from 'react-router-dom'
-import Spinner from '../../commons/Spinner/Spinner'
-import ItemCount from '../ItemCount/ItemCount'
 
-function ItemListContainer({ greeteng }) {
+import { getDocs, collection, query, where } from 'firebase/firestore'
 
-    const { categoryId } = useParams()
+import { db } from "../../services/firebase/firebaseConfig";
+
+const ItemListContainer = ({ greeting }) => {
 
     const [products, setProducts] = useState([])
 
-    const [isLoading, setIsLoading] = useState(false)
+    const { categoryId } = useParams();
 
     useEffect(() => {
 
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts;
-        setIsLoading(true)
 
+        const collectionRef = categoryId
+            ? query(collection(db, "eShop"), where('category', '==', categoryId))
+            : collection(db, "eShop")
 
-        asyncFunc(categoryId)
-            .then(response => {
-                setProducts(response)
-                setIsLoading(false)
+        getDocs(collectionRef)
+            .then((response) => {
+                const productAdapted = response.docs.map((doc) => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data }
+                })
+                setProducts(productAdapted)
             })
             .catch(error => {
                 console.log(error)
-                setIsLoading(false)
             })
-    }, [categoryId, setIsLoading])
 
-    if (isLoading) return <Spinner isLoading={isLoading} />
-
-
+    }, [categoryId])
     return (
+
         <div>
-            <h1 className='title'>{greeteng}</h1>
+            <h1 className='title'>{greeting}</h1>
             <ItemList products={products} />
         </div>
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

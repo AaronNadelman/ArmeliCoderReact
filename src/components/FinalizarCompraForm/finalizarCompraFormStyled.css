@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formContainer {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    padding: 2rem;
+    color: #253A47;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.botonForm {
+    text-decoration: none;
+    background-color: #253A47;
+    color: white;
+    border-radius: 6px;
+    padding: 10px;
+}
