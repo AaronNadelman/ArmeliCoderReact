@@ -32,7 +32,7 @@ const FinalizarCompraForm = ({ onConfirm }) => {
                         className='input'
                         type="text"
                         value={phone}
-                        onChange={(target) => setPhone(target.value)}
+                        onChange={({ target }) => setPhone(target.value)}
                     />
                 </label>
                 <label className="label">
@@ -41,7 +41,7 @@ const FinalizarCompraForm = ({ onConfirm }) => {
                         type="text"
                         className="input"
                         value={email}
-                        onChange={(target) => setEmail(target.value)}
+                        onChange={({ target }) => setEmail(target.value)}
                     />
                 </label>
                 <div className="label">
